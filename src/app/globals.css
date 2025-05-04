@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -14,13 +16,72 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #da29da;
+    --foreground: #ffffff;
   }
 }
 
+/* Global font-family settings */
 body {
-  background: var(--background);
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Countdown Styling */
+.countdown-item {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+}
+
+.bg-gradient-animate {
+  background: linear-gradient(45deg, #B0B0B0, #F2C1D1, #F8A1B4, #F4F1EB, #D4A6E4, #FFD5B5, #A4C9B9);
+  background-size: 600% 600%;
+  animation: gradientAnimation 100s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add the animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-6xl {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #4A4A4A;
+  letter-spacing: 1px;
+}
+
+.text-lg {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #6B6B6B;
 }
