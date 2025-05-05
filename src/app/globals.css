@@ -47,7 +47,7 @@ body {
 .bg-gradient-animate {
   background: linear-gradient(45deg, #B0B0B0, #F2C1D1, #F8A1B4, #F4F1EB, #D4A6E4, #FFD5B5, #A4C9B9);
   background-size: 600% 600%;
-  animation: gradientAnimation 100s ease infinite;
+  animation: gradientAnimation 20s ease infinite;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -84,4 +84,13 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   color: #6B6B6B;
+}
+
+
+body {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair), serif;
 }
