@@ -5,7 +5,14 @@ import './globals.css'; // Ensure global styles are imported
 export default function Home() {
   const targetDate = new Date('2025-05-19T00:00:00');
 
-  const renderer = ({ days, hours, minutes, seconds }) => {
+  type CountdownTime = {
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  };
+
+  const renderer = ({ days, hours, minutes, seconds }: CountdownTime ) => {
     return (
       <div className="flex space-x-4">
         <div className="countdown-item">
